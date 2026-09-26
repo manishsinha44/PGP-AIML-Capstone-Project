@@ -1,0 +1,12 @@
+{
+  "model_name": "Baseline CNN (Adam)",
+  "image_size": 128,
+  "channels": 1,
+  "class_names": [
+    "Normal",
+    "Lung Opacity",
+    "No Lung Opacity / Not Normal"
+  ],
+  "test_macro_f1": 0.6695723325276618,
+  "test_accuracy": 0.6797401948538596
+}
