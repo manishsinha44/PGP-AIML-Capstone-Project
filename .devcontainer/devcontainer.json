@@ -1,0 +1,16 @@
+{
+  "name": "pneumonia-classifier-deploy",
+  "build": {
+    "dockerfile": "../deployment/Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit App",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "echo 'Container ready. Run: streamlit run deployment/app.py --server.port 8501 --server.address 0.0.0.0'",
+  "remoteUser": "root"
+}
